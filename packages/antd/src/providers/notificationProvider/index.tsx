@@ -39,8 +39,8 @@ export const notificationProvider: NotificationProvider = {
     } else {
       staticNotification.open({
         key,
-        description: message,
-        message: description ?? null,
+        description: description ?? null,
+        message,
         type,
       });
     }
@@ -85,8 +85,8 @@ export const useNotificationProvider = (): NotificationProvider => {
       } else {
         notification.open({
           key,
-          description: message,
-          message: description ?? null,
+          description: description ?? null,
+          message,
           type,
         });
       }
